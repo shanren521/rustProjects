@@ -10,6 +10,12 @@ mod chapter3; // 使用mod声明模块
 use chapter3::variables_mutability_1; // 通过use导入函数
 use chapter3::{print_test, data_types_2, functions_3, control_flow_5};
 
+mod chapter4;
+use chapter4::{chapter4_1, chapter4_2, chapter4_3};
+
+mod chapter5;
+use chapter5::{chapter5_1, chapter5_2, chapter5_3};
+
 
 macro_rules! my_macro_main {
     () => {
@@ -82,7 +88,15 @@ fn chapter_3() {
 }
 
 fn chapter_4() {
+    chapter4_1();
+    chapter4_2();
+    chapter4_3();
+}
 
+fn chapter_5() {
+    chapter5_1();
+    chapter5_2();
+    chapter5_3();
 }
 
 fn main() {
@@ -95,7 +109,7 @@ fn main() {
     my_fn_main(format_args!("Hello, {}!", "fn_main"));
     my_fn_main(format_args!("The answer is: {}", 42));
     // generation_random_number();
-    chapter_3();
-
-
+    // chapter_3();
+    // chapter_4();
+    chapter_5();
 }
